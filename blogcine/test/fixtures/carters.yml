@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cartelera: MyString
+  nombre: MyString
+  rating: MyString
+
+two:
+  cartelera: MyString
+  nombre: MyString
+  rating: MyString

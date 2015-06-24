@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p> 
+<h1>Estrenos 2015 Carters</h1>
+
+<table>
+  <thead>
+    <tr>
+ 
+&iexcl;Bienvenidos, esta es mi&nbsp;&nbsp;&nbsp;1&ordf;&nbsp;&nbsp;&nbsp;p&aacute;gina!
+
+
+    <pre>CARLOS HERNANDEZ LINUX UNITEC SPS</pre>
+
+ <textarea name="ejemploarea" cols="30" rows="3">Escribe el texto que quieras</textarea> 
+
+    <embed src="varios/audio.mid" autostart="false" loop="true">
+
+ <a href="mailto:carlosmauriciohernandezdiaz@gmail.com">carlosmauriciohernandezdiaz@gmail.com</a>
+      <th>Cartelera</th>
+      <th>Nombre</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<body leftmargin="20" topmargin="0" marginwidth="20" marginheight="0" >
+<marquee bgcolor="#006699" behavior="alternate" direction="right">
+  <b><font color="#FFFFCC" size="5">CARTELERA DE PELICULAS SPS HONDURAS 2015 </font></b>
+
+  <tbody>
+    <% @carters.each do |carter| %>
+      <tr>
+        <td><%= carter.cartelera %></td>
+        <td><%= carter.nombre %></td>
+        <td><%= carter.rating %></td>
+        <td><%= link_to 'Show', carter %></td>
+        <td><%= link_to 'Edit', edit_carter_path(carter) %></td>
+        <td><%= link_to 'Destroy', carter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carter', new_carter_path %>
